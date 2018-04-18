@@ -10,7 +10,7 @@ sudo rm -rf .emacs*
 echo ";; Start
 (require 'package)
 (package-initialize)
-(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"$
+(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
 
 ;; configure elpy
 (elpy-enable)

@@ -8,7 +8,8 @@ sudo pip3 install --upgrade pip
 sudo pip3 install pybluez
 sudo pip3 install elpy jedi flake8 rope_py3k importmagic autopep8 yapf
 sudo rm -rf .emacs*
-echo ";; Start
+cat <<EOF > ~/.emacs.d/init.el
+";; Start
 (require 'package)
 (package-initialize)
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
@@ -19,7 +20,8 @@ echo ";; Start
 ;; py3
 (setq elpy-rpc-python-command "python3")
 (setq python-shell-interpreter "python3")
-" >> ~/.emacs.d/init.el
+
+EOF
 
 echo "Python-kivy installation: "
 echo

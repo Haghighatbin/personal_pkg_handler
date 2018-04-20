@@ -1,13 +1,14 @@
 echo "Initiating Raspberry Pi personal package manager: "
 echo
-sudo apt-get install software-properties-common
-sudo apt-get update && apt-get upgrade
-sudo apt-get install libbluetooth-dev git python3 python3-pip emacs25 emacs25-el emacs25-common-non-dfsg
+sudo apt-get install software-properties-common -y
+sudo apt-get update && apt-get upgrade -y
+sudo apt-get install libbluetooth-dev git python3 python3-pip emacs25 emacs25-el emacs25-common-non-dfsg -y
 # fro emacs24 --> sudo  apt-get install emacs24 emacs24-el emacs24-common-non-dfsg
 sudo pip3 install --upgrade pip
 sudo pip3 install pybluez
 sudo pip3 install elpy jedi flake8 rope_py3k importmagic autopep8 yapf
 sudo rm -rf .emacs*
+sudo mkdir ~/.emacs.d
 cat <<EOF > ~/.emacs.d/init.el
 ";; Start
 (require 'package)
